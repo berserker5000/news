@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+{{ article.article_title }}
+{% endblock %}
+
+{% block content %}
+    <div class="container text-center">
+        <div class="col-xl-12">
+            <div class="font-weight-bold text-center">
+                <h1>{{ article.article_title }}</h1>
+            </div>
+
+            {% for image in article.articleimage_set.all %}
+                {% if image.is_main %}
+                    <img class="img-thumbnail" src="{{ image.image.url }}">
+                {% endif %}
+            {% endfor %}
+            <div class="text-justify">
+                {{ article.full_article }}
+            </div>
+        </div>
+        <div class="text-right small">
+
+            Created: {{ article.created }}
+        </div>
+        <a href="#" onclick="window.history.back();" class="previous">&#8249;&#8249;- Back to main</a>
+
+    </div>
+{% endblock %}

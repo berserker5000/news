@@ -1,0 +1,41 @@
+.content {
+    width:100%;
+    /*text-align: center;*/
+    min-height: 100%;
+    margin-bottom: 50px;
+}
+
+.underline-none{
+    color:black;
+}
+
+
+.underline-none:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.article {
+    margin-bottom: 30px;
+
+}
+
+.footer{
+    height: 50px;
+    flex-shrink: 0;
+    background-color: deepskyblue;
+    margin-top: 8%;
+}
+
+.small{
+    font-size: 55%;
+}
+
+.marging {
+
+    margin-right:5px;
+}
+
+.marging::first-letter{
+    margin-left:5px;
+}
